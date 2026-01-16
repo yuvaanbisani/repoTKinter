@@ -1,0 +1,31 @@
+from tkinter import*
+window = Tk()
+window.title("hello tkinter!")
+window.geometry("400x400")
+window.mainloop()
+
+
+from tkinter import*
+from datetime import date
+root = Tk()
+root.title('getting started with widgets')
+root.geometry("400x300")
+label = Label(text = "hello there!" , fg = "white", bg = "FF5502", height = 5, width = 300)
+label.pack()
+namelabel = Label(text = "fullname = ", bg = "3895AF")
+nameentry = Entry()
+namelabel.pack()
+nameentry.pack()
+def display():
+    name = nameentry.get()
+    global Message
+    message = "welcome to the applicatione! \n todays date is :"
+    greet = "Hello! + name +" "\n"
+    textbox.insert(END, greet)
+    textbox.insert(END, message)
+    textbox.insert(END, date.today())
+textbox = Text(height=3)
+textbox.pack()
+button = Button(text = 'begin!', command = display, height = 2, bg = "FEDDEF", fg = "FFFFFF")
+button.pack()
+root.mainloop()
